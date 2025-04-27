@@ -1,0 +1,57 @@
+@import url("normalize.css");
+@import url("reset.css");
+
+@font-face {
+  font-family: "";
+  src: url("../fonts/");
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black-color: #;
+  --black-light-color: #;
+  --gray-color: #6c7072;
+  --gray-light-color: #ccc;
+  --white-color: #;
+  --accent-color: #;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 90rem;
+  /* overflow-y: scroll; */
+}
+
+/* body::-webkit-scrollbar {
+    display: none;
+} */
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px dashed var(--accent-color);
+}
+
+.container {
+  padding: 0 1.25rem;
+  min-height: 100dvh;
+}

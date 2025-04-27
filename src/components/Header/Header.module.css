@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border-bottom: 2px solid var(--gray-light-color);
+  padding: 0.5rem 1rem;
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 600;
+}
+
+.date {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
