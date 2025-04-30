@@ -7,7 +7,7 @@ const NewsBanner: FC<{ news: NewsProps }> = (props) => {
   const { news } = props;
 
   return (
-    <div>
+    <div className={styles.banner}>
       <Image image={news.image} />
       <h3 className={styles.title}>{news.title}</h3>
       <p className={styles.extra}>
