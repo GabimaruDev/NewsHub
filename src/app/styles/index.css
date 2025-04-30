@@ -2,8 +2,8 @@
 @import url("reset.css");
 
 @font-face {
-  font-family: "";
-  src: url("../fonts/");
+  font-family: "Rubik";
+  src: url("../../assets/fonts/Rubik-VariableFont_wght.ttf");
 }
 
 *,
@@ -18,9 +18,13 @@
   --black-color: #;
   --black-light-color: #;
   --gray-color: #6c7072;
-  --gray-light-color: #ccc;
-  --white-color: #;
+  --gray-light-color: #d5d5d5;
+  --white-color: #f0f0f0;
   --accent-color: #;
+}
+
+:focus-visible {
+  outline: 2px dashed var(--gray-color);
 }
 
 html {
@@ -30,12 +34,8 @@ html {
 body {
   margin: 0 auto;
   max-width: 90rem;
-  /* overflow-y: scroll; */
+  font-family: "Rubik";
 }
-
-/* body::-webkit-scrollbar {
-    display: none;
-} */
 
 button {
   border: 0;
@@ -45,10 +45,6 @@ button {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-:focus-visible {
-  outline: 3px dashed var(--accent-color);
 }
 
 .container {
