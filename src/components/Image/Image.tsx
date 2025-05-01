@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styles from "./Image.module.css";
+import styles from "./styles.module.css";
 
 interface ImageProps {
   image: string;
