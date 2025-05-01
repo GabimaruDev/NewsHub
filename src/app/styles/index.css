@@ -15,11 +15,11 @@
 }
 
 :root {
-  --black-color: #;
+  --black-color: #090a0a;
   --black-light-color: #;
   --gray-color: #6c7072;
   --gray-light-color: #d5d5d5;
-  --white-color: #f0f0f0;
+  --white-color: #f2f4f5;
   --accent-color: #;
 }
 
@@ -35,6 +35,7 @@ body {
   margin: 0 auto;
   max-width: 90rem;
   font-family: "Rubik";
+  color: var(--black-color);
 }
 
 button {

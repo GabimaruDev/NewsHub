@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { formatDate } from "../../app/helpers/formatDate";
-import styles from "./Header.module.css";
+import styles from "./styles.module.css";
 
 const Header = () => {
   const [date, setDate] = useState<Date>(new Date());

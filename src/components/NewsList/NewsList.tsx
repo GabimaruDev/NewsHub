@@ -1,6 +1,6 @@
 import { FC } from "react";
 import NewsItem from "../NewsItem/NewsItem";
-import styles from "./NewsList.module.css";
+import styles from "./styles.module.css";
 
 interface NewsListProps {
   news: NewsProps[];
