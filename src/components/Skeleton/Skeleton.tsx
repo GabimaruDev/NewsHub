@@ -1,6 +1,12 @@
 import styles from "./styles.module.css";
 
-const Skeleton = ({ count = 1, type = "banner" }) => {
+interface SkeletonProps {
+  count: number;
+  type: string;
+}
+
+const Skeleton = (props: SkeletonProps) => {
+  const { count = 1, type = "banner" } = props;
   return (
     <>
       {count > 1 ? (

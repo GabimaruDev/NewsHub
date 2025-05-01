@@ -1,4 +1,3 @@
-import { FC } from "react";
 import styles from "./styles.module.css";
 
 interface CategoriesProps {
@@ -7,7 +6,7 @@ interface CategoriesProps {
   setSelectedCategory: (category: string) => void;
 }
 
-const Categories: FC<CategoriesProps> = (props) => {
+const Categories = (props: CategoriesProps) => {
   const { categories, selectedCategory, setSelectedCategory } = props;
 
   return (

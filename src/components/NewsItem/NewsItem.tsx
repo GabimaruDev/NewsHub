@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { formatTimeAgo } from "../../app/helpers/formatTimeAgo";
 import styles from "./styles.module.css";
 
@@ -6,7 +5,7 @@ interface NewsItemProps {
   item: NewsProps;
 }
 
-const NewsItem: FC<NewsItemProps> = (props) => {
+const NewsItem = (props: NewsItemProps) => {
   const { item } = props;
 
   return (
