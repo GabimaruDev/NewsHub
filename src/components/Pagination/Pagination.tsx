@@ -1,4 +1,3 @@
-import { FC } from "react";
 import styles from "./styles.module.css";
 
 interface PaginationProps {
@@ -9,7 +8,7 @@ interface PaginationProps {
   handleNextPage: () => void;
 }
 
-const Pagination: FC<PaginationProps> = (props) => {
+const Pagination = (props: PaginationProps) => {
   const { currentPage, totalPages, handlePrevPage, handlePageClick, handleNextPage } = props;
 
   return (

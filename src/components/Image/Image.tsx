@@ -1,11 +1,10 @@
-import { FC } from "react";
 import styles from "./styles.module.css";
 
 interface ImageProps {
   image: string;
 }
 
-const Image: FC<ImageProps> = (props) => {
+const Image = (props: ImageProps) => {
   const { image } = props;
 
   return (
