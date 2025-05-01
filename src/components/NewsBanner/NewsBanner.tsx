@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { formatTimeAgo } from "../../app/helpers/formatTimeAgo";
 import Image from "../Image/Image";
-import styles from "./NewsBanner.module.css";
+import styles from "./styles.module.css";
 
 const NewsBanner: FC<{ news: NewsProps }> = (props) => {
   const { news } = props;

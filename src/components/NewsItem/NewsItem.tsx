@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { formatTimeAgo } from "../../app/helpers/formatTimeAgo";
-import styles from "./NewsItem.module.css";
+import styles from "./styles.module.css";
 
 interface NewsItemProps {
   item: NewsProps;
@@ -16,7 +16,7 @@ const NewsItem: FC<NewsItemProps> = (props) => {
         <div className={styles.info}>
           <h3 className={styles.title}>{item.title}</h3>
           <p className={styles.extra}>
-            {formatTimeAgo(item.published)} by {item.author}
+            {formatTimeAgo(item.published)} · by {item.author}
           </p>
         </div>
       </a>
