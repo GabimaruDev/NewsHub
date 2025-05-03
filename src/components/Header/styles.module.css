@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  border-bottom: 2px solid var(--gray-light-color);
+  border-bottom: 0.125rem solid var(--white-color);
   padding: 0.5rem 1rem;
 }
 
 .title {
   font-size: 2.75rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .date {
