@@ -1,23 +1,26 @@
 .categories {
   display: flex;
-  align-items: center;
   gap: 0.5rem;
-  width: 100%;
+  padding: 0.25rem;
   overflow-x: auto;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  padding-bottom: 0.25rem;
 }
 
 .item,
 .active {
   border-radius: 2rem;
   padding: 0.5rem 1rem;
+  background-color: var(--white-color);
+}
+
+.item:hover {
+  outline: 1px solid var(--gray-color);
 }
 
 .active {
-  background-color: #e7e7ff;
-  color: #6b4eff;
-}
-
-::-webkit-scrollbar {
-  display: none;
+  background-color: var(--accent-light-color);
+  color: var(--accent-color);
+  border: 0px solid var(--accent-color);
+  outline: 1px solid var(--accent-color);
 }

@@ -16,11 +16,12 @@
 
 :root {
   --black-color: #090a0a;
-  --black-light-color: #;
-  --gray-color: #6c7072;
-  --gray-light-color: #d5d5d5;
-  --white-color: #f2f4f5;
-  --accent-color: #;
+  --gray-color: #7a7a7a;
+  --gray-light-color: #3f3f3f;
+  --white-color: #ececec;
+  --accent-light-color: #e2f2ff;
+  --accent-color: #0175db;
+  --accent-color-hover: #0067c2;
 }
 
 :focus-visible {
@@ -29,6 +30,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-color: var(--gray-color) var(--white-color);
 }
 
 body {
