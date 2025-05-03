@@ -11,7 +11,9 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>
-        <a href="#!">NewsHub</a>
+        <a href="#" onClick={() => location.reload()}>
+          NewsHub
+        </a>
       </h1>
       <p className={styles.date}>{formatDate(date)}</p>
     </header>
