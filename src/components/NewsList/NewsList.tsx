@@ -1,4 +1,3 @@
-import { FC } from "react";
 import NewsItem from "../NewsItem/NewsItem";
 import styles from "./styles.module.css";
 
@@ -6,7 +5,7 @@ interface NewsListProps {
   news: NewsProps[];
 }
 
-const NewsList: FC<NewsListProps> = (props) => {
+const NewsList = (props: NewsListProps) => {
   const { news } = props;
   return (
     <ul className={styles.list}>

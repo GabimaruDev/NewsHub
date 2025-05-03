@@ -4,6 +4,7 @@ import Categories from "../../../components/Categories/Categories";
 import NewsBanner from "../../../components/NewsBanner/NewsBanner";
 import NewsList from "../../../components/NewsList/NewsList";
 import Pagination from "../../../components/Pagination/Pagination";
+import Search from "../../../components/Search/Search";
 import Skeleton from "../../../components/Skeleton/Skeleton";
 import styles from "./Main.module.css";
 
@@ -16,10 +17,15 @@ const Main = () => {
   const totalPages = 10;
   const pageSize = 10;
 
-  const fetchNews = async (currentPage: number, selectedCategory: string) => {
+  const fetchNews = async (keywords: string | null = null) => {
     try {
       setIsLoading(true);
-      const response = await getNews(currentPage, pageSize, selectedCategory === "All" ? null : selectedCategory);
+      const response = await getNews({
+        page_number: currentPage,
+        page_size: pageSize,
+        category: selectedCategory === "All" ? null : selectedCategory,
+        keywords: keywords,
+      });
       if (response) {
         setNews(response.news);
         setIsLoading(false);
@@ -46,7 +52,8 @@ const Main = () => {
   }, []);
 
   useEffect(() => {
-    fetchNews(currentPage, selectedCategory);
+    fetchNews();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPage, selectedCategory]);
 
   const handlePrevPage = () => {
@@ -74,6 +81,7 @@ const Main = () => {
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
       />
+      <Search fetchNews={fetchNews} />
       {news.length && !isLoading ? <NewsBanner news={news[0]} /> : <Skeleton count={1} type={"banner"} />}
       <Pagination
         currentPage={currentPage}
