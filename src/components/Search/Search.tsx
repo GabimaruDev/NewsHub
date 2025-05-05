@@ -2,21 +2,15 @@ import { useState } from "react";
 import styles from "./styles.module.css";
 
 interface SearchProps {
-  fetchNews: (keywords: string) => void;
+  setKeywords: (keywords: string) => void;
 }
 
 const Search = (props: SearchProps) => {
-  const { fetchNews } = props;
-  const [keyword, setKeyword] = useState("");
+  const { setKeywords } = props;
+  const [inputValue, setInputValue] = useState("");
 
   const clearInput = () => {
-    setKeyword("");
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      fetchNews(keyword);
-    }
+    setInputValue("");
   };
 
   return (
@@ -25,14 +19,19 @@ const Search = (props: SearchProps) => {
         <input
           className={styles.input}
           onChange={(e) => {
-            setKeyword(e.target.value);
+            setInputValue(e.target.value);
           }}
           type="text"
-          value={keyword}
+          value={inputValue}
           placeholder="Search..."
-          onKeyDown={handleKeyDown}
+          name="search"
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              setKeywords(inputValue);
+            }
+          }}
         />
-        {keyword ? (
+        {inputValue ? (
           <button onClick={clearInput} className={styles.close}>
             X
           </button>
@@ -41,7 +40,7 @@ const Search = (props: SearchProps) => {
       <button
         className="button"
         onClick={() => {
-          fetchNews(keyword);
+          setKeywords(inputValue);
         }}
       >
         Search

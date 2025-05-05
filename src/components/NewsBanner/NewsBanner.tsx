@@ -1,9 +1,11 @@
 import { formatTimeAgo } from "../../app/helpers/formatTimeAgo";
+import withSkeleton from "../../app/helpers/hocs/withSkeleton";
 import Image from "../Image/Image";
 import styles from "./styles.module.css";
 
-const NewsBanner = (props: { news: NewsProps }) => {
+const NewsBanner = (props: { news: INews }) => {
   const { news } = props;
+  if (!news) return null;
 
   return (
     <a href={news.url} className={styles.banner}>
@@ -16,4 +18,6 @@ const NewsBanner = (props: { news: NewsProps }) => {
   );
 };
 
-export default NewsBanner;
+const NewsBannerWithSkeleton = withSkeleton(NewsBanner, "banner", 1);
+
+export default NewsBannerWithSkeleton;
