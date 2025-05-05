@@ -1,8 +1,8 @@
 import styles from "./styles.module.css";
 
 interface SkeletonProps {
-  count: number;
-  type: string;
+  count?: number;
+  type?: SkeletonType;
 }
 
 const Skeleton = (props: SkeletonProps) => {
